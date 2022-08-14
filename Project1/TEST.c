@@ -102,82 +102,82 @@
 //执行性代码必须在大括号之内
 
 int h = 114514;
-#include <stdio.h>
-//int main()
-//{
-//	int a = 200;
-//	printf("a = %d\n", a);
-//	printf("%d\n", h);
-//	
-//	
-//	return 0;
-//}
-//生命周期
-//变量的生命周期指的是变量的创建和销毁之间的时间段
-//局部变量：进入局部范围->离开局部范围
-//全局变量：程序的生命周期
-
-
-//常量
-//1.字面常量
-//2.const修饰的常变量
-//3.#define定义的标识符常量
-//4.枚举常量
-//#define max 999
-//enum Sex
-//{
-//	//此种变量的未来可能取值
-//	male = 5,//赋初值
-//	famale,
-//	secret
-//};
+//#include <stdio.h>
+////int main()
+////{
+////	int a = 200;
+////	printf("a = %d\n", a);
+////	printf("%d\n", h);
+////	
+////	
+////	return 0;
+////}
+////生命周期
+////变量的生命周期指的是变量的创建和销毁之间的时间段
+////局部变量：进入局部范围->离开局部范围
+////全局变量：程序的生命周期
 //
 //
+////常量
+////1.字面常量
+////2.const修饰的常变量
+////3.#define定义的标识符常量
+////4.枚举常量
+////#define max 999
+////enum Sex
+////{
+////	//此种变量的未来可能取值
+////	male = 5,//赋初值
+////	famale,
+////	secret
+////};
+////
+////
+////int main()
+////{
+////	   //字面常量：
+////	/*114514;
+////	"birthday";*/
+////	   //const修饰的常变量
+////	/*const int num = 200;
+////	num = 40;*///系统报错，因为const修饰变量不可修改，此时num即为常变量
+////	//被const修饰过的变量依然不算是常量
+////	   //#define定义的标识符常量
+////	/*int a = max;
+////	printf("%d\n", a);
+////	return 0;*/
+////	   //枚举常量：可以一一列举的常量
+////	//枚举关键字 enum 
+////	printf("%d\n", male);
+////	printf("%d\n", famale);
+////	printf("%d\n", secret);
+////	
+////}
+////    8.13
+////字符串->用双引号括起来的一串字符
+//// 字符串的结束标志是一个\0的转义字符，不计入字符串内容
+////int main()
+////{
+////	"zhang";
+////	return 0;
+////}
+////strlen使用也要引用头文件 #include <string.h>
+//#include <string.h>
+//
 //int main()
 //{
-//	   //字面常量：
-//	/*114514;
-//	"birthday";*/
-//	   //const修饰的常变量
-//	/*const int num = 200;
-//	num = 40;*///系统报错，因为const修饰变量不可修改，此时num即为常变量
-//	//被const修饰过的变量依然不算是常量
-//	   //#define定义的标识符常量
-//	/*int a = max;
-//	printf("%d\n", a);
-//	return 0;*/
-//	   //枚举常量：可以一一列举的常量
-//	//枚举关键字 enum 
-//	printf("%d\n", male);
-//	printf("%d\n", famale);
-//	printf("%d\n", secret);
-//	
-//}
-//    8.13
-//字符串->用双引号括起来的一串字符
-// 字符串的结束标志是一个\0的转义字符，不计入字符串内容
-//int main()
-//{
-//	"zhang";
+//	//字符数组：一组相同类型的元素
+//	//字符串在结尾处隐藏了\0的字符
+//	/*char arr[] = "hello";*/
+//	char arr1[] = "zhang";
+//	char arr2[] = { 'z', 'h', 'a', 'n', 'g'};
+//	/*printf("%s\n", arr1);
+//	printf("%s\n", arr2);*/
+//	//求字符串长度
+//	/*int len=strlen("zhang");
+//	printf("%d\n", len);*/
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//
 //	return 0;
 //}
-//strlen使用也要引用头文件 #include <string.h>
-#include <string.h>
-
-int main()
-{
-	//字符数组：一组相同类型的元素
-	//字符串在结尾处隐藏了\0的字符
-	/*char arr[] = "hello";*/
-	char arr1[] = "zhang";
-	char arr2[] = { 'z', 'h', 'a', 'n', 'g'};
-	/*printf("%s\n", arr1);
-	printf("%s\n", arr2);*/
-	//求字符串长度
-	/*int len=strlen("zhang");
-	printf("%d\n", len);*/
-	printf("%d\n", strlen(arr1));
-	printf("%d\n", strlen(arr2));
-
-	return 0;
-}

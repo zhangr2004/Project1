@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 ////第一次敲代码，跟随课上
 ////printf使用需要引用头文件#include<stdio.h>
-////#include<stdio.h>
+#include<stdio.h>
 ////
 ////int main()
 ////{
@@ -179,5 +179,13 @@ int h = 114514;
 //	printf("%d\n", strlen(arr1));
 //	printf("%d\n", strlen(arr2));
 //
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a, b);
+//	printf("%d", sum);
 //	return 0;
 //}

@@ -6,6 +6,8 @@ extern int h;
 //	printf("%d\n", h);
 //	return 0;
 //}
+
+
 //8.14
 //转义字符
 //1.   \'  用于表示字符常量
@@ -31,6 +33,8 @@ extern int h;
 //	return 0;
 //}
 //转义字符在字符长度计算中算作一个字符
+
+
 //     8.15
 //选择语句  if else
 //int main()
@@ -87,6 +91,8 @@ extern int h;
 //	}//以此方式访问数组中所有元素
 //	return 0;
 //}
+
+
 //     8.16
 //操作符（初识）
 //算术操作符: + - * / %
@@ -117,6 +123,8 @@ extern int h;
 //移位操作符是在数字二进制表示方法上进行移位，上面的2用二进制表示方法为32个比特位的00000000000000000000000000000010，左移一位后就是00000000000000000000000000000100，对应数字4，所以b打印的结果是4.
 
 //a += 5 <=> a = a + 5
+
+
 //     8.17
 //关键字
 //关键字不能做变量名
@@ -195,9 +203,53 @@ extern int h;
 //define是一个预处理指令
 //1.定义符号（常量）
 //2.定义宏
-#define Add(X,Y) X+Y//定义宏
+//#define Add(X,Y) X+Y//定义宏
+//int main()
+//{
+//	printf("%d",Add(3, 4));
+//	return 0;
+//}
+
+
+//        8.18
+//指针
+//操作系统 32/64位：32/64根地址线 - 物理上的，真实存在的线，通电时正电为一，负电为零.
+//电信号转化为数字信号：0/1组成的二进制序列，共有2^32/64种序列，每个序列都可以作为内存单元的地址
+//一个内存单元的大小是一个字节，因此32位操作系统支持的最大内存为4GB
+//int main()
+//{
+//	int a = 10;
+//	printf("%p", &a);//%p专用于打印地址
+//	int * pa = &a;//pa用于存放地址，称为指针变量
+//	//星号说明pa是指针变量，int说明指向的对象（即变量a）的类型
+//	*pa = 20;//解引用操作，通过储存在pa中的地址找到a
+//	return 0;
+//}
+/*int main()
+{
+	printf("%d\n",sizeof(char*));
+	printf("%d\n",sizeof (short*)) ;
+	printf("%d\n", sizeof(int*));
+	printf("%d\n", sizeof(long*));
+	printf("%d\n", sizeof(long long*));
+	printf("%d\n",sizeof(float*));
+	printf("%d\n", sizeof(double*));
+
+	return 0;
+}*///指针变量大小都相同
+//结构体
+//让C语言创建新的类型
+struct book
+{
+	char name[20];//成员变量
+	float price;
+
+};
 int main()
 {
-	printf("%d",Add(3, 4));
+	struct book a = { "c语言从入门到入坟",50.0 };//结构体的创建和初始化
+	printf("%f\n", a.price);
+	struct book* pa = &a;//存指针方式
+	printf("%s\n", pa->name);
 	return 0;
 }

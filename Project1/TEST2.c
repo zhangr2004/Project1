@@ -239,17 +239,99 @@ extern int h;
 }*///指针变量大小都相同
 //结构体
 //让C语言创建新的类型
-struct book
-{
-	char name[20];//成员变量
-	float price;
+//struct book
+//{
+//	char name[20];//成员变量
+//	float price;
+//
+//};
+//int main()
+//{
+//	struct book a = { "c语言从入门到入坟",50.0 };//结构体的创建和初始化
+//	printf("%f\n", a.price);
+//	struct book * pa = &a;//存指针方式,结构体指针
+//	printf("%s\n", pa->name);
+//	return 0;
+//}
 
-};
+
+
+//    8.23
+//int F(int a,int b)
+//{
+//	if (a >= b)
+//		return  a;
+//	else
+//		return b;
+//}
+//int main()
+//{
+//	int x = 0;
+//	int y = 0;
+//	scanf("%d %d", &x, &y);
+//	int max = F(x, y);
+//	printf("%d",max);
+//	return 0;
+//}
+//int main()
+//{
+//	printf("     **     \n");
+//	printf("     **     \n");
+//	printf("************\n");
+//	printf("************\n");
+//	printf("    *  *    \n");
+//	printf("    *  *    \n");
+//	return 0;
+//}
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	if (a % 5 == 0)
+//		printf("YES");
+//	else
+//		printf("NO");
+//
+//	return 0;
+//}
+//语句
+//顺序结构  选择结构   循环结构
+//分支语句 if else
+//由一个分号隔开的就是一条语句
+//  &&符号表示“且”关系
+//C语言中0表示假，非0表示真
+//当程序运行到return时会直接终止，不会继续向下运行
+//int main()//判断一个数是否是奇数
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int b = a % 2;
+//	if (1 == b)
+//	{
+//		printf("YES");
+//	}
+//	else
+//	{
+//		printf("NO");
+//	}
+//	return 0;
+//}
 int main()
 {
-	struct book a = { "c语言从入门到入坟",50.0 };//结构体的创建和初始化
-	printf("%f\n", a.price);
-	struct book* pa = &a;//存指针方式
-	printf("%s\n", pa->name);
+	int i = 0;
+	while (100 >= i)
+	{
+		
+		int x = i % 2;
+		if (1 == x)
+		{
+			printf("%d\n", i);
+			i++;
+		}
+		else
+		{
+			i++;
+		}
+	}
 	return 0;
 }

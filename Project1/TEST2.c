@@ -316,22 +316,145 @@ extern int h;
 //	}
 //	return 0;
 //}
-int main()
+//int main()
+//{
+//	int i = 0;
+//	while (100 >= i)
+//	{
+//		
+//		int x = i % 2;
+//		if (1 == x)
+//		{
+//			printf("%d\n", i);
+//			i++;
+//		}
+//		else
+//		{
+//			i++;
+//		}
+//	}
+//	return 0;
+//}
+//         8.24
+//分支语句 switch 
+//switch语句中只能用整型变量
+//switch允许嵌套使用
+//int main()
+//{
+//	int day = 0;
+//	scanf("%d", &day);
+//	switch (day)
+//	{
+//	case 1:
+//		printf("星期一");
+//		break;
+//	case 2:
+//		printf("星期二");
+//	default:
+//		printf("不知道");
+//		break;
+//	}
+//	return 0;
+//}
+// 循环语句 while
+//在while循环中，break用于永久终止循环
+//在while循环中，continue的作用是跳过本次循环
+//EOF-end of lile  文件结束标志
+//getchar 输入一个字符
+//outchar 输出一个字符  输入ctrl+z使getchar读取结束
+//键盘上的操作会先被录入到缓冲区，接下来由程序读取
+//例：
+//int main()
+//{
+//	char password[20] = {0};
+//	printf("请输入密码\n");
+//	scanf("%s", password);//在输入回车触发scanf指令时会在缓冲区留下换行符\n
+//	printf("请确认密码（Y/N）");
+//	int ch = getchar();//getchar本质是读取缓冲区字符，此时的getchar会自动读取缓冲区的\n并进入if判定
+//	if ('Y' == ch)//用\n判定的结果进入else，导致输入Y和N之前就会显示确认失败
+//	{
+//		printf("确认成功");
+//	}
+//	else
+//	{
+//		printf("确认失败");
+//	}
+//	return 0;
+//}
+
+//解决方法
+// 一是在正式使用的getchar前再插入getchar指令来清空缓冲区
+//例：
+/*int main()
 {
-	int i = 0;
-	while (100 >= i)
+	char password[20] = {0};
+	printf("请输入密码\n");
+	scanf("%s", password);
+	printf("请确认密码（Y/N）");
+	getchar();
+	int ch = getchar();
+	if ('Y' == ch)
 	{
-		
-		int x = i % 2;
-		if (1 == x)
-		{
-			printf("%d\n", i);
-			i++;
-		}
-		else
-		{
-			i++;
-		}
+		printf("确认成功");
+	}
+	else
+	{
+		printf("确认失败");
 	}
 	return 0;
-}
+}*///但该方法在一些情况下依然会失效，如密码中含有空格，则scanf只读取空格之前的内容，留下的内容也会导致出现bug
+//二是使用while循环语句将全部元素读取干净
+//例
+//int main()
+//{
+//	char password[20] = {0};
+//	printf("请输入密码\n");
+//	scanf("%s", password);
+//	printf("请确认密码（Y/N）");
+//	int a = 0;
+//	while ((a = getchar()) != '\n')
+//	{
+//		;
+//	}//使用while循环直到清除空格
+//	int ch = getchar();
+//	if ('Y' == ch)
+//	{
+//		printf("确认成功");
+//	}
+//	else
+//	{
+//		printf("确认失败");
+//	}
+//	return 0;
+//}//此方法读取的password只能读到空格之前
+//符号||以为数学中的或
+//for循环
+//int main()
+//{
+//	int a = 0;//此处变量a初始化的值会影响循环结果
+//	while (a < 10)
+//	{
+//		printf("%d", a);
+//		a++;
+//	}
+//	return 0;
+//}
+//上述循环用for语句的表示方式是
+//int main()
+//{
+//	int a = 0;
+//	for (a = 1;10 >= a;a++)
+//	{
+//		printf("%d ", a);
+//	}
+//	return 0;
+//}
+//一些变种：
+//int main()
+//{
+//	for (;;)
+//	{
+//		printf("乐 ");
+//	}
+//	return 0;
+//}//无限循环

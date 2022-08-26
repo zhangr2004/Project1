@@ -99,28 +99,75 @@
 //	return 0;
 //}
 #include <string.h>
+//int main()
+//{
+//	int i = 1;
+//	
+//	
+//		for(i = 1;3 >= i;i++)
+//		{
+//			char a[20] = { 0 };
+//			printf("请输入密码：");
+//			scanf("%s", a);
+//			if (strcmp(a,"zhang")==0)//字符串比较不能使用“==”，而应该使用函数strcmp,字符串相同时会输出0.
+//			{
+//				break;
+//			}
+//		}
+//	if (3 > i)
+//	{
+//		printf("登陆成功");
+//	}
+//	if (3 <= i)
+//	{
+//		printf("登陆失败");
+//	}
+//	return 0;
+//}
+
+//     8.26
+//int main()
+//{
+//	int i;
+//	for (i = 1;100 >= i;i++)
+//	{
+//		if ((i % 3) == 0)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int i, a, b, ret = 0;
+//	scanf("%d %d", &a, &b);
+//	for (i = 1;i <= a||i<=b;i++)
+//	{
+//		if (a% i == 0 && b % i == 0)
+//		{
+//			ret = i;
+//		}
+//	}
+//	printf("%d", ret);
+//	return 0;
+//}
 int main()
 {
-	int i = 1;
-	
-	
-		for(i = 1;3 >= i;i++)
+	int i=100, j=0;
+	for (i = 100;i <= 200;i++)
+	{
+		for (j = 2;j < i;j++)
 		{
-			char a[20] = { 0 };
-			printf("请输入密码：");
-			scanf("%s", a);
-			if (strcmp(a,"zhang")==0)//字符串比较不能使用“==”，而应该使用函数strcmp,字符串相同时会输出0.
+			if (0 == i % j)
 			{
 				break;
 			}
 		}
-	if (3 > i)
-	{
-		printf("登陆成功");
-	}
-	if (3 <= i)
-	{
-		printf("登陆失败");
+		if (j == i)
+		{
+			printf("%d ", i);
+		}
 	}
 	return 0;
 }

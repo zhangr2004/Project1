@@ -152,22 +152,60 @@
 //	printf("%d", ret);
 //	return 0;
 //}
-int main()
-{
-	int i=100, j=0;
-	for (i = 100;i <= 200;i++)
-	{
-		for (j = 2;j < i;j++)
-		{
-			if (0 == i % j)
-			{
-				break;
-			}
-		}
-		if (j == i)
-		{
-			printf("%d ", i);
-		}
-	}
-	return 0;
-}
+
+
+//#include <math.h>
+//int main()
+//{
+//	int i=100, j=0;
+//	for (i = 100;i <= 200;i++)
+//	{
+//		for (j = 2;j < i;j++)
+//		{
+//			if (0 == i % j)
+//			{
+//				break;
+//			}
+//		}
+//		if (j == i)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+//      8.28
+//sqrt() 函数用于计算开平方,使用前需要引用
+// goto 语句：很多时候不会使用，必须使用的场景不多
+//int main()
+//{
+//flag:
+//	printf("我是个烧饼");
+//	goto flag;
+//	return 0;
+//}
+//goto语句无视break；使用过多会导致程序混乱
+//关机程序shutdown -s -t 60
+//取消关机shutdown -a
+//C语言中的system（）专用于执行系统命令
+#include <string.h>
+#include <stdlib.h>
+//int main()
+//{
+//	char arr[20] = { 0 };
+//	system("shutdown -s -t 60");
+//again:	
+//	printf("你的电脑将在一分钟内关机，输入'我是个傻逼'以阻止关机\n");
+//	scanf("%s", arr);
+//	if (strcmp(arr, "我是个傻逼") == 0)
+//	{
+//		system("shutdown -a");
+//	}
+//	else
+//	{
+//		goto again;
+//	}
+//	return 0;
+//}
